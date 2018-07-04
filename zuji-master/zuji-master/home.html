@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+							<!-- -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<meta name="viewport" content="width = device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">	
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+	<style type="text/css">
+		.theMainImg{
+	 
+		   background: url("images/home-bg.jpg");
+		   background-size: 100% 100%;
+	 
+		}
+	 </style>
+</head>
+<body>
+	<div class="box container">
+		<div class="theMainImg" style="height:840px;width: 100%;margin:0px;padding: 0px;">
+			<!-- 地图 -->
+			<div id="main" style="height:800px;width: 100%;margin:0px;padding: 0px;padding-top: 15px;"></div>
+		</div>
+		<div class="box box-top top-style1">
+			<div class="logoImg">				<!-- logo图片 -->
+				<a href="">
+					<img class="logo-w" src="images/logo-w.png">
+				</a>
+			</div>									
+			<div class="nav-search">			<!-- 搜索栏-->
+				<form action="search.html" method="get">
+					<input type="text" class="search-content" name="searchContent">
+					<input type="submit" class="search-btn" name="searchBtn" value="搜索">
+				</form>
+			</div>		
+			<div class="nav-items">				<!-- 登陆注册-->
+				<ul>
+					<li>
+						<img class="search-icon" src="images/search-icon.png">
+					</li>
+					<li>
+						<a href="#" class="top-name">登录</a>
+					</li>
+					<li class="loginout" style="display:none">
+						<a href="#">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+
+		<!-- <div class="theAdArea"></div>			活动、广告区 -->
+		<div class="theHotArea">				<!-- 热门旅游区 -->
+			<div class="topic">热门旅游区</div>
+			<div class="area" style="height:500px;margin-bottom:10%">
+				<div id="sortpic" style="margin:0;width:100%;height:100%"></div>
+			</div>
+		</div>									
+		<div class="theRecommendArea" style="margin-top: 300px;">			<!-- 感兴趣 -->
+			<div class="topic">猜你感兴趣</div>
+			<div class="change">
+				<span class="icon-loop2 loop">换一换</span>
+			</div>
+			<div class="theItems">
+				<ul>
+					<li id="tour">
+						<div class="item">
+							<a href="">
+								<div class="img">
+									<img src="images/test.jpg">
+									<div class="tag">
+										<span>
+											<i class="icon-eye"></i>
+										</span>
+										<span class="bt">景点</span>
+								</div>
+								</div>
+							</a>
+							
+							<div class="info">
+								<div class="subtitle">
+									<a href="">
+										<p>千户苗寨</p>
+									</a>
+								</div>
+								<div class="bottom">
+									<a href="">
+										<span class="h_position">贵州</span>
+										<span class="h_renking">当前景点排名第一</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="culture">
+						<div class="item">
+							<a href="">
+								<div class="img">
+									<img src="images/test.jpg">
+									<div class="tag">
+										<span>
+											<i class="icon-office"></i>
+										</span>
+										<span class="bt">人文</span>
+								</div>
+								</div>
+							</a>
+							
+							<div class="info">
+								<div class="subtitle">
+									<a href="">
+										<p>苗寨</p>
+									</a>
+								</div>
+								<div class="bottom">
+									<a href="">
+										<span class="h_position">贵州-千户苗寨</span>
+										<span class="h_renking">当前建筑排名第一</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="diet">
+						<div class="item">
+							<a href="">
+								<div class="img">
+									<img src="images/test.jpg">
+									<div class="tag">
+										<span>
+											<i class="icon-spoon-knife"></i>
+										</span>
+										<span class="bt">饮食</span>
+								</div>
+								</div>
+							</a>
+							
+							<div class="info">
+								<div class="subtitle">
+									<a href="">
+										<p>酸汤鱼</p>
+									</a>
+								</div>
+								<div class="bottom">
+									<a href="">
+										<span class="h_position">贵州-千户苗寨</span>
+										<span class="h_renking">当前美食排名第一</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="note">
+						<div class="item">
+							<a href="">
+								<div class="img">
+									<img src="images/test.jpg">
+									<div class="tag">
+										<span>
+											<i class="icon-book"></i>
+										</span>
+										<span class="bt">游记</span>
+								</div>
+								</div>
+							</a>
+							
+							<div class="info">
+								<div class="subtitle">
+									<a href="">
+										<p>千里之行</p>
+									</a>
+								</div>
+								<div class="bottom">
+									<a href="">
+										<span class="h_position">贵州-千户苗寨</span>
+										<span class="h_renking">当前人文排名第一</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+				<!-- 登陆 -->
+		<div class="registeform SignIn" style="display: none;">
+			<form>
+				<input id="userName" class="form-control"
+					   data-val="true"
+					   data-val-required="请输入账号"
+					   name="userName"
+					   placeholder="输入用户名">
+				<input id="password" class="form-control"
+					   data-val="true"
+					   data-val-required="缺少密码"
+					   name="password"
+					   type="password"
+					   placeholder="输入密码">
+				<input id="identifyCode" class="form-control"
+					   name="identifyCode"
+					   placeholder="输入验证码"
+					   style="width: 200px;margin-left: 17px">
+				<img src="index.php?c=Reg&a=Verify" onClick="src='index.php?c=Reg&a=Verify&s='+Math.random();" class="verification">
+				<div>
+					<div style="width: 100%; height: 30px;" >
+						<input type="checkbox" id="check1" name="check1">
+						<label for="check1">同意会员条款和免责条例</label>
+					</div>
+					<input class="signUpButton"  type="button" value="登陆">
+					<p id="para2">
+						还没有族迹账号？
+						<a href="#" class="goSignUp" style="color: #0094ff;">
+							点击注册
+						</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- 注册 -->
+		<div class="registeform SignUp" style="display: none;">
+			<form>
+				<input class="form-control"
+					   name="userName"
+					   placeholder="输入用户名"
+					   style="">
+				<input class="form-control"
+					   name="password"
+					   placeholder="输入8-16位密码"
+					   type="password">
+				<input class="form-control"
+					   name="password"
+					   placeholder="请确认密码"
+					   type="password">
+				<input class="form-control"
+					   name="identifyCode"
+					   placeholder="输入验证码"
+				       style="width: 200px;margin-left: 17px">
+                <img src="images/identify.jpg" class="verification">
+				<div>
+					<div style="width: 100%; height: 30px;" >
+							<input type="checkbox" id="check1" name="check1">
+							<label for="check1">同意会员条款和免责条例</label>
+					</div>
+					<input class="signUpButton" type="submit" value="注册" onclick="checkSignUp()">
+					<p id="para2">
+						已有族迹账号？
+						<a href="#" class="goSignIn" style="color: #0094ff">
+							点击登录
+						</a>
+					</p>
+				</div>
+			</form>
+		</div>
+		<div class="box footer">				<!-- 底部-->
+			<div class="bottomLine"></div>
+			<nav>
+				<div class="footer-txt footer-title">联系我们</div>
+				<div class="box footer-icon">
+					<a href="www.weibo.com">
+						<div class="icon box icon-weibo">
+							<img src="images/weibo.png">
+						</div>
+					</a>	
+					<a href="#">
+						<div class="icon icon-wechat">	
+							<ul>
+								<li>
+									<img id="wechat" src="images/wechat.png">
+								</li>
+								<li>
+									<img id="wechat2" src="images/wechat2.png">
+								</li>
+							</ul>								
+						</div>
+					</a>			
+				</div>
+				<div class="footer-txt footer-service">
+					<a href="customerService.html">用户手册</a>
+				</div>
+				<div class="footer-txt footer-subscribe">
+					<a class="login" href="#">Hannah / 退出</a>
+				</div>
+				<div class="footer-txt footer-msg">Copyright © 2017 Pinch Design Ltd. All rights reserved. Zuji is a registered trademark.</div>
+			</nav>					
+		</div>
+	</div>
+	<script type="text/javascript" src='js/echarts.js'></script>
+	<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+	<!-- <script type="text/javascript" src='js/china.js'></script> -->
+	<script type="text/javascript" src='http://gallery.echartsjs.com/dep/echarts/map/js/china.js'></script>
+	<script type="text/javascript" src='js/map.js'></script>
+	<script type="text/javascript" src='js/sort.js'></script>
+	<script type="text/javascript" src='js/public.js'></script>
+	<script type="text/javascript" src='js/home.js'></script>
+	<script type="text/javascript" src='layui/layui.all.js'></script>
+</body>
+</html>

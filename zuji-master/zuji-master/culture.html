@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+							<!-- -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>culture</title>
+	<meta name="viewport" content="width = device-width,initial-scale=1">
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/culture-building.css">
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+</head>
+<body>
+	<div class="box container">
+		<div class="theMainImg" id="renwenimg">
+			<div class="mainTag">
+				<p>人&nbsp;&nbsp;文</p>
+			</div>
+		</div>
+		<div class="box box-top top-style1">
+			<div class="logoImg">				<!-- logo图片 -->
+				<a href="home.html">
+					<img class="logo-w" src="images/logo-w.png">
+				</a>
+			</div>									
+			<div class="nav-search">			<!-- 搜索栏-->
+				<form action="search.html" method="get">
+					<input type="text" class="search-content" name="searchContent">
+					<input type="submit" class="search-btn" name="searchBtn" value="搜索">
+				</form>
+			</div>		
+			<div class="nav-items">				<!-- 登陆注册-->
+				<ul>
+					<li>
+						<img class="search-icon" src="images/search-icon.png">
+					</li>
+					<li>
+						<a href="#" class="top-name">登录</a>
+					</li>
+					<li class="loginout" style="display:none">
+						<a href="#">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box index">
+			<div class="index1">
+				<ul>
+					<li id="province">贵州</li>
+					<li id="nation">苗族</li>
+					<li id="position">西江千户苗寨</li>
+				</ul>
+			</div>
+			<div class="index2">
+				<span class="webfont icon-gift">想去</span>
+				<span class="webfont icon-spinner5">去过</span>
+			</div>
+		</div>
+
+		<div class="menu-2">
+			<ul>
+				<li type="custom">习俗</li>
+				<li type="history">历史</li>
+				<li type="dress">服饰</li>
+				<li type="artwork">工艺品</li>
+			</ul>
+		</div>
+		<div class="bottomLayer">
+			<!--内容介绍-->
+			<!-- 习俗 -->
+		  <div class="content" id="custom">
+			<div class="empty">
+				<span class="icon-baffled empty-icon"></span>
+				<span>哎呀，还没有资料</span>
+				<div class="btn-primary empty-btn">我来补充</div>
+			</div>
+		 </div>
+
+		  <!-- 历史 -->
+		  <div class="content" id="history" style="display:none;">
+				<div class="empty">
+					<span class="icon-baffled empty-icon"></span>
+					<span>哎呀，还没有资料</span>
+					<div class="btn-primary empty-btn">我来补充</div>
+				</div>
+		 </div>
+
+			   <!-- 服饰 -->
+			   <div class="content" id="dress" style="display:none;">
+					<div class="empty">
+						<span class="icon-baffled empty-icon"></span>
+						<span>哎呀，还没有资料</span>
+						<div class="btn-primary empty-btn">我来补充</div>
+					</div>
+					
+				   </div>
+
+		    <!-- 工艺品 -->
+				   
+			<div class="content" id="artwork" style="display:none;">
+				<div class="empty">
+					<span class="icon-baffled empty-icon"></span>
+					<span>哎呀，还没有资料</span>
+					<div class="btn-primary empty-btn">我来补充</div>
+				</div>
+				
+				</div>
+
+
+			<div class="addLine">
+				<span class="icon-bell">不全面？</span><span id="add">我来补充</span>
+			</div>
+
+			<div class="theAddArea" style="display: none">				<!--补充区域-->
+				<div>	
+					<span>当前：</span>
+					<span id="province-add">d</span>
+					<span>-</span>
+					<span id="nation-add">d</span>
+					<span>-</span>
+					<span id="positon-add">d</span>
+					<span>-</span>
+					<span id="menu-add">d</span>
+					<span>-</span>
+					<span id="menu2-add">d</span>
+					<span id="close">X</span>
+				</div>
+				<div class="addContent box">
+					<div class="addarea">
+					<div class="oneadd" id="oneadd1">
+					<div class="add-num">1</div>
+					<div class="add-right">
+							<input type="text" class="title-add" name="title-add" placeholder="请输入主题">
+							<hr/>
+							<div class="box addOut">
+								<div class="addImgArea">
+									<span class="addImg icon-images">
+										<img src="">
+									</span>
+									<div id="uploadposition1" class="updateposition">
+										<button  class="layui-btn layui-btn-big" style="width: 100px;height: 10px;" id="pickfiles1" href="javascript:;">选择图片</button>
+										<button  class="layui-btn layui-btn-big" style="width: 100px;height: 10px;" id="uploadfiles1" href="javascript:;">开始上传</button>
+									</div>
+								</div>
+								<div class="infoOut">
+									<textarea class="info-add" placeholder="请输入文字介绍..."></textarea>
+								</div>
+								
+							</div>
+							<div class="preimage box box-top guage"></div>
+	
+					</div>
+					</div>
+					</div>
+
+					<span class="icon-minus minus"></span>
+				</div>
+				<div class="addBottom">
+					<span class="icon-plus plus"></span>
+					<input type="button" class="btn-primary add-btn" id="addmenu" name="add-submit" value="确认">
+				</div>
+			</div>
+		</div>
+
+		<!-- 登陆 -->
+		<div class="registeform SignIn" style="display: none;">
+			<form>
+				<input class="form-control"
+					   data-val="true"
+					   data-val-required="请输入账号"
+					   name="userName"
+					   placeholder="输入用户名">
+				<input class="form-control"
+					   data-val="true"
+					   data-val-required="缺少密码"
+					   name="password"
+					   type="password"
+					   placeholder="输入密码">
+				<input class="form-control"
+					   name="identifyCode"
+					   placeholder="输入验证码"
+					   style="width: 200px;margin-left: 17px">
+				<img src="images/identify.jpg" class="verification">
+				<div>
+					<div style="width: 100%; height: 30px;" >
+						<input type="checkbox" id="check1" name="check1">
+						<label for="check1">同意会员条款和免责条例</label>
+					</div>
+					<input class="signUpButton"  type="submit" value="登陆" onclick="checkSignIn()">
+					<p id="para2">
+						还没有族迹账号？
+						<a href="#" class="goSignUp" style="color: #0094ff;">
+							点击注册
+						</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- 注册 -->
+		<div class="registeform SignUp" style="display: none;">
+			<form>
+				<input class="form-control"
+					   name="userName"
+					   placeholder="输入用户名"
+					   style="">
+				<input class="form-control"
+					   name="password"
+					   placeholder="输入8-16位密码"
+					   type="password">
+				<input class="form-control"
+					   name="password"
+					   placeholder="请确认密码"
+					   type="password">
+				<input class="form-control"
+					   name="identifyCode"
+					   placeholder="输入验证码"
+				       style="width: 200px;margin-left: 17px">
+                <img src="images/identify.jpg" class="verification">
+				<div>
+					<div style="width: 100%; height: 30px;" >
+							<input type="checkbox" id="check1" name="check1">
+							<label for="check1">同意会员条款和免责条例</label>
+					</div>
+					<input class="signUpButton" type="submit" value="注册" onclick="checkSignUp()">
+					<p id="para2">
+						已有族迹账号？
+						<a href="#" class="goSignIn" style="color: #0094ff">
+							点击登录
+						</a>
+					</p>
+				</div>
+			</form>
+		</div>
+		<!-- 二级菜单 -->
+		<div class="menu2">
+			<div class="center-i"><span class="icon-smile2"></span></div>
+			<!-- <div class="rotate"> -->
+				<ul>
+					<li id="m-culture"><a href="#"><span class="icon-book"></span></a></li>
+					<li id="m-food"><a href="#"><span class="icon-spoon-knife"></span></a></li>
+					<li id="m-buiding"><a href="#"><span class="icon-office"></span></a></li>
+					<li id="m-note"><a href="#"><span class="icon-camera"></span></a></li>
+					<li id="m-up"><a href="#"><span class="icon-point-up"></span></a></li>
+				</ul>
+			<!-- </div> -->
+		</div>
+			<!-- 登陆 -->
+		<div class="registeform SignIn" style="display: none;">
+				<form>
+					<input id="userName" class="form-control"
+						   data-val="true"
+						   data-val-required="请输入账号"
+						   name="userName"
+						   placeholder="输入用户名">
+					<input id="password" class="form-control"
+						   data-val="true"
+						   data-val-required="缺少密码"
+						   name="password"
+						   type="password"
+						   placeholder="输入密码">
+					<input id="identifyCode" class="form-control"
+						   name="identifyCode"
+						   placeholder="输入验证码"
+						   style="width: 200px;margin-left: 17px">
+					<img src="index.php?c=Reg&a=Verify" onClick="src='index.php?c=Reg&a=Verify&s='+Math.random();" class="verification">
+					<div>
+						<div style="width: 100%; height: 30px;" >
+							<input type="checkbox" id="check1" name="check1">
+							<label for="check1">同意会员条款和免责条例</label>
+						</div>
+						<input class="signUpButton"  type="button" value="登陆">
+						<p id="para2">
+							还没有族迹账号？
+							<a href="#" class="goSignUp" style="color: #0094ff;">
+								点击注册
+							</a>
+						</p>
+					</div>
+				</form>
+			</div>
+	
+			<!-- 注册 -->
+			<div class="registeform SignUp" style="display: none;">
+				<form>
+					<input class="form-control"
+						   name="userName"
+						   placeholder="输入用户名"
+						   style="">
+					<input class="form-control"
+						   name="password"
+						   placeholder="输入8-16位密码"
+						   type="password">
+					<input class="form-control"
+						   name="password"
+						   placeholder="请确认密码"
+						   type="password">
+					<input class="form-control"
+						   name="identifyCode"
+						   placeholder="输入验证码"
+						   style="width: 200px;margin-left: 17px">
+					<img src="images/identify.jpg" class="verification">
+					<div>
+						<div style="width: 100%; height: 30px;" >
+								<input type="checkbox" id="check1" name="check1">
+								<label for="check1">同意会员条款和免责条例</label>
+						</div>
+						<input class="signUpButton" type="submit" value="注册" onclick="checkSignUp()">
+						<p id="para2">
+							已有族迹账号？
+							<a href="#" class="goSignIn" style="color: #0094ff">
+								点击登录
+							</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		<div class="box footer">				<!-- 底部-->
+			<div class="bottomLine"></div>
+			<nav>
+				<div class="footer-txt footer-title">联系我们</div>
+				<div class="box footer-icon">
+					<a href="www.weibo.com">
+						<div class="icon box icon-weibo">
+							<img src="images/weibo.png">
+						</div>
+					</a>	
+					<a href="#">
+						<div class="icon icon-wechat">	
+							<ul>
+								<li>
+									<img id="wechat" src="images/wechat.png">
+								</li>
+								<li>
+									<img id="wechat2" src="images/wechat2.png">
+								</li>
+							</ul>								
+						</div>
+					</a>			
+				</div>
+				<div class="footer-txt footer-service">
+					<a href="customerService.html">用户手册</a>
+				</div>
+				<div class="footer-txt footer-subscribe">
+					<a class="login" href="#">Hannah / 退出</a>
+				</div>
+				<div class="footer-txt footer-msg">Copyright © 2017 Pinch Design Ltd. All rights reserved. Zuji is a registered trademark.</div>
+			</nav>					
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/culture.js"></script>
+	<script type="text/javascript" src="js/plup/plupload.full.min.js"></script>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+</body>
+</html>

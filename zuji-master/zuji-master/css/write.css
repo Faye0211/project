@@ -1,0 +1,89 @@
+#main{
+    width: 70%;
+    height:auto;
+    margin: 0px auto;
+}
+
+.logo-bb {
+    height: 50px;
+    width: auto;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+.test{
+    min-height:500px;
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.layui-form{
+    /*margin-top: 20px;*/
+    width:90%;
+    margin: 0px auto;
+    position:relative;
+    top:20px;
+    z-index: 999;
+}
+
+.layui-form-label{
+    height: 30px;
+    line-height: 30px;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.layui-btn{
+    background-color: #5eb95e;
+}
+
+.layui-progress{
+    width: 250px;
+    float: right;
+    position: relative;
+    top:15px;
+    right: 20%;
+}
+
+.title{
+    border-bottom: 1px solid #999999;
+    height: 40px;
+    width: 450px;
+    font-size: 20px;
+    color: #666666;
+}
+
+.layui-input-block{
+    width: 60%;
+}
+
+.select{
+    width: 30%;
+}
+
+/*.search-input{*/
+    /*width: 100px;*/
+/*}*/
+
+.s-nation{
+    position: absolute;
+    top: 62px;
+    left: 33%;
+    float: left;
+}
+
+.s-area{
+    position: absolute;
+    top: 62px;
+    left: 66%;
+    float: left;
+}
+
+select{
+    z-index: 19999;
+}
+
+/*.area-input{*/
+    /*width: 150px;*/
+/*}*/

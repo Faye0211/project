@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+							<!-- -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>游记</title>
+	<meta name="viewport" content="width = device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="css/note-detail.css">
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+</head>
+<body>
+	<div class="box container">
+		<div class="theMainImg" style="height:800px">
+			
+		</div>
+		<div class="box box-top top-style1">
+			<div class="logoImg">				<!-- logo图片 -->
+				<a href="home.html">
+					<img class="logo-w" src="images/logo-w.png">
+				</a>
+			</div>									
+			<div class="nav-search">			<!-- 搜索栏-->
+				<form action="search.html" method="get">
+					<input type="text" class="search-content" name="searchContent">
+					<input type="submit" class="search-btn" name="searchBtn" value="搜索">
+				</form>
+			</div>		
+			<div class="nav-items">				<!-- 登陆注册-->
+				<ul>
+					<li>
+						<img class="search-icon" src="images/search-icon.png">
+					</li>
+					<li>
+						<a href="#" class="top-name">登录</a>
+					</li>
+					<li class="loginout" style="display:none">
+						<a href="#">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box index">
+			<span class="avatar">
+				<a href="">
+					<img src="images/wechat.png">
+				</a>
+			</span>
+			<span class="title">一路向北，追寻探索者的未知路</span>
+			<ul>
+				<li>
+					<div class="info">
+						<span>作者：</span><span>Abc123</span>
+						<span class="icon-s icon-eye">100</span>		
+						<span class="icon-s icon-clock">2017-01-01</span>
+					</div>
+				</li>
+				<li>
+					<div class="noteValue">
+						<span class="value like">
+							<span class="icon-point-up article_zan">0</span><span>&nbsp;赞</span>
+						</span>
+						<span class="value collect">
+							<span class="icon-heart article_collect">0</span><span>&nbsp;收藏</span>
+						</span>
+						<span class="value response">
+							<span class="icon-bubbles3 article_response">0</span><span>&nbsp;回复</span>
+						</span>
+						<span class="value share">
+							<span class="icon-pushpin">0</span><span>&nbsp;分享</span>
+						</span>
+						
+					</div>
+				</li>
+			</ul>
+			
+			
+		</div>
+		<div class="box note-main" style="text-align:center">
+			<div class="maincontent" style="margin-left: 13%;padding-right: 10%;width: 676%;">
+
+			</div>
+			<div class="note-text">
+				<span class="editTime">
+					<span>最后编辑于&nbsp;</span><span class="edittime">2017-01-01  20：00</span>
+				</span>
+				<!-- <span class="report">举报</span> -->
+				
+			</div>
+			<!-- <div class="note-list">
+				<span class="icon-list"></span><span>目录</span>
+				<span><a href=""></a></span>
+			</div> -->
+		</div>
+
+		<div class="note-response" style="text-align:center">
+		
+		</div>
+		<div style="width:100%;padding-left:34%">
+			
+		<div id="page1" class="page1"></div>
+		</div>
+		<div class="myResponse">
+			<span class="r-avatar">
+					<a href="">
+						<img src="images/wechat.png">
+					</a>
+			</span>
+			<span class="test" style="display: block;">
+				<textarea class="commentmsg" style="width: 100%;"></textarea>
+			</span><br>
+				
+			<button  class="layui-btn layui-btn-normal send">发表评论</button>
+		</div>
+
+       			<!-- 登陆 -->
+		<div class="registeform SignIn" style="display: none;">
+			<form>
+				<input id="userName" class="form-control"
+					   data-val="true"
+					   data-val-required="请输入账号"
+					   name="userName"
+					   placeholder="输入用户名">
+				<input id="password" class="form-control"
+					   data-val="true"
+					   data-val-required="缺少密码"
+					   name="password"
+					   type="password"
+					   placeholder="输入密码">
+				<input id="identifyCode" class="form-control"
+					   name="identifyCode"
+					   placeholder="输入验证码"
+					   style="width: 200px;margin-left: 17px">
+				<img src="index.php?c=Reg&a=Verify" onClick="src='index.php?c=Reg&a=Verify&s='+Math.random();" class="verification">
+				<div>
+					<div style="width: 100%; height: 30px;" >
+						<input type="checkbox" id="check1" name="check1">
+						<label for="check1">同意会员条款和免责条例</label>
+					</div>
+					<input class="signUpButton"  type="button" value="登陆">
+					<p id="para2">
+						还没有族迹账号？
+						<a href="#" class="goSignUp" style="color: #0094ff;">
+							点击注册
+						</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- 注册 -->
+		<div class="registeform SignUp" style="display: none;">
+			<form>
+				<input class="form-control"
+					   name="userName"
+					   placeholder="输入用户名"
+					   style="">
+				<input class="form-control"
+					   name="password"
+					   placeholder="输入8-16位密码"
+					   type="password">
+				<input class="form-control"
+					   name="password"
+					   placeholder="请确认密码"
+					   type="password">
+				<input class="form-control"
+					   name="identifyCode"
+					   placeholder="输入验证码"
+					   style="width: 200px;margin-left: 17px">
+				<img src="images/identify.jpg" class="verification">
+				<div>
+					<div style="width: 100%; height: 30px;" >
+							<input type="checkbox" id="check1" name="check1">
+							<label for="check1">同意会员条款和免责条例</label>
+					</div>
+					<input class="signUpButton" type="submit" value="注册" onclick="checkSignUp()">
+					<p id="para2">
+						已有族迹账号？
+						<a href="#" class="goSignIn" style="color: #0094ff">
+							点击登录
+						</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<div class="box footer">				<!-- 底部-->
+			<div class="bottomLine"></div>
+			<nav>
+				<div class="footer-txt footer-title">联系我们</div>
+				<div class="box footer-icon">
+					<a href="www.weibo.com">
+						<div class="icon box icon-weibo">
+							<img src="images/weibo.png">
+						</div>
+					</a>	
+					<a href="#">
+						<div class="icon icon-wechat">	
+							<ul>
+								<li>
+									<img id="wechat" src="images/wechat.png">
+								</li>
+								<li>
+									<img id="wechat2" src="images/wechat2.png">
+								</li>
+							</ul>								
+						</div>
+					</a>			
+				</div>
+				<div class="footer-txt footer-service">
+					<a href="customerService.html">用户手册</a>
+				</div>
+				<div class="footer-txt footer-subscribe">
+					<a class="login" href="#">Hannah / 退出</a>
+				</div>
+				<div class="footer-txt footer-msg">Copyright © 2017 Pinch Design Ltd. All rights reserved. Zuji is a registered trademark.</div>
+			</nav>					
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/note-detail.js"></script>
+	<script type="text/javascript" src="js/laypage/laypage.js"></script>
+	<script type="text/javascript" src="layui/layui.all.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personalCenter</title>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="raty-master/lib/jquery.raty.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/personalCenter.css">
+    <link rel="stylesheet" type="text/css" href="css/signin.css">
+    <!--<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+</head>
+<body>
+<div class="container">
+    <div class="box box-top top-style1">
+        <div class="logoImg">				<!-- logo图片 -->
+            <a href="home.html">
+                <img class="logo-w" src="images/logo-w.png">
+            </a>
+        </div>
+        <div class="nav-search">			<!-- 搜索栏-->
+            <form action="search.html" method="get">
+                <input type="text" class="search-content" name="searchContent">
+                <input type="submit" class="search-btn" name="searchBtn" value="搜索">
+            </form>
+        </div>
+        <div class="nav-items">				<!-- 个人中心-->
+            <ul>
+                <li>
+                    <img class="search-icon" src="images/search-icon.png">
+                </li>
+                <li>
+                    <a href="" class="top-name"></a>
+                    <div id="nav-personal" style="display: none">
+                        <ul>
+                            <!--<li><a></a></li>-->
+                            <li>
+                                <a href="#">想去</a>
+                            </li>
+                            <li>
+                                <a href="#">足迹</a>
+                            </li>
+                            <li>
+                                <a href="#">游记</a>
+                            </li>
+                            <li>
+                                <a href="#">消息</a>
+                            </li>
+                            <li>
+                                <a href="#">贡献</a>
+                            </li>
+                            <li>
+                                <a href="#">管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="exit">
+                    <a href="#">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">                         <!-- 个人中心展示页面-->
+        <div class="personal-page">
+            <div class="pageImage">
+                <img src="images/homepage.jpg">
+                <p class="sign">"和大家说些什么"</p>
+            </div>
+            <div class="nav-my">
+                <div class="my-head-picture">
+                    <img src="images/headpic.jpg">
+                </div>
+                <div class="my-name">Abc123</div>
+                <div class="my-part" style="cursor: pointer">
+                    <ul>
+                        <li style="border-bottom:5px solid #3366FF;">想去</li>
+                        <li>足迹</li>
+                        <li>游记</li>
+                        <li>消息</li>
+                        <li>贡献</li>
+                        <li>设置</li>
+                    </ul>
+                </div>
+                <div class="my-follow">
+                    <div style="cursor: pointer;">关注数</div>
+                    <div>1</div>
+                </div>
+                <div class="my-fans">
+                    <div style="cursor: pointer;">粉丝数</div>
+                    <div>0</div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-show">         <!-- 想去-->
+            <div class="my-part-name">
+                <div>我的想去</div>
+                <div>我想去</div>
+                <div id="wnum" class="number">0</div>
+                <div>个少数民族旅游区</div>
+            </div>
+            <div id="my-wannaGo" style="text-align:center">
+                <ul id="wannaGo">
+                    <li>
+                        <a href="">西江千户苗寨</a>
+                        <img src="images/pic1.jpg">
+                        <i class="layui-icon" >&#x1006;</i>
+                    </li>
+                    <li>
+                        <a href="">西江千户苗寨</a>
+                        <img src="images/pic1.jpg">
+                        <i class="layui-icon" >&#x1006;</i>
+                    </li>
+                </ul>
+                <div id="page1" class="page1"></div>
+            </div>
+        </div>
+        <div class="personal-show" style=" display: none;">         <!-- 足迹-->
+            <div class="my-part-name">
+                <div>我的足迹</div>
+                <div>我去过</div>
+                <div id="hnum" class="number">0</div>
+                <div>个少数民族旅游区</div>
+            </div>
+            <div id="my-footprint" style="text-align:center">
+                <ul id="haveGo">
+                    <li>
+                        <img src="images/pic1.jpg">
+                        <a href="">西江千户苗寨</a>
+                        <span class="footprint-score">
+                            <span class="demo">
+                                <span id="function-demo" class="target-demo"></span>
+                                <span id="function-hint" class="hint"></span>
+                            </span>
+                        </span>
+                        <div class="footprint-asses">
+                            <input class="asses" type="button" value="评价" name="">
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/pic1.jpg">
+                        <a href="">西江千户苗寨</a>
+                        <span class="footprint-score">
+                            <span class="demo">
+                                <span  class="target-demo"></span>
+                                <span  class="hint"></span>
+                            </span>
+                        </span>
+                        <div class="footprint-asses">
+                            <input class="asses" type="button" value="评价" name="">
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/pic1.jpg">
+                        <a href="">西江千户苗寨</a>
+                        <span class="footprint-score">
+                            <span class="demo">
+                                <span  class="target-demo"></span>
+                                <span  class="hint"></span>
+                            </span>
+                        </span>
+                        <div class="footprint-asses">
+                            <input class="asses" type="button" value="评价" name="">
+                        </div>
+                    </li>
+                </ul>
+                <div id="scoreList" style="display: none">                    <!--评价列表-->
+                    <button type="reset" class="layui-btn layui-btn-small close" style="background-color: #0E6EB8;">
+                    <i class="layui-icon " >&#x1006;</i>
+                    </button>
+                    <form id="asses-score" class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">价格水平</label>
+                            <div class="layui-input-block">
+                                <span class="demo" >
+                                    <span id="function-demo1"></span>
+                                    <span id="hint1" class="hint1"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">交通</label>
+                            <div class="layui-input-block">
+                                 <span class="demo" >
+                                    <span id="function-demo2"></span>
+                                    <span id="hint2" class="hint2"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">服务质量</label>
+                            <div class="layui-input-block">
+                                 <span class="demo" >
+                                    <span id="function-demo3"></span>
+                                    <span id="hint3" class="hint3"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">环境质量</label>
+                            <div class="layui-input-block">
+                                 <span class="demo" >
+                                    <span id="function-demo4"></span>
+                                    <span id="hint4" class="hint4"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block" style="margin-left: 0px">
+                                <button class="layui-btn  submit" type="button" style="background-color: #0E6EB8;">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="page2" class="page1"></div>
+            </div>
+        </div>
+        <div class="personal-show" style=" display: none;">         <!-- 游记-->
+            <div class="notePart">
+                <div>游记管理</div>
+                <div id="myNote" style="color: #000000;cursor: pointer;">我的游记</div>
+                <div id="mynotenum" class="number" style="color: #000000">1</div>
+                <div id="myDraft" style="cursor: pointer;">我的草稿</div>
+                <div id="mydraftnum" class="number" style="color: #000000">1</div>
+                <div id="myCollection" style="cursor: pointer;">我的收藏</div>
+                <div id="mycollectnum" class="number" style="color: #000000">1</div>
+                <div id="writeNote" style="cursor: pointer;"><a href="write.html">写游记</a></div>
+            </div>
+            <div class="my-note" style="text-align:center">              <!-- 我的游记-->
+                <ul id="mynote">
+                </ul>
+                <div id="page3" class="page1"></div>
+            </div>
+            <div class="my-draft" style="display: none;text-align:center">              <!-- 我的草稿-->
+                <ul id="mydraft">
+                </ul>
+                <div id="page4" class="page1"></div>
+            </div>
+            <div class="my-collection" style="display: none;text-align:center">        <!-- 我的收藏-->
+                <ul id="mycollection">
+                </ul>
+                <div id="page5" class="page1"></div>
+            </div>
+        </div>
+        <div class="personal-show" style=" display: none;">            <!-- 我的消息-->
+            <div class="my-part-name">
+                <div>我的消息</div>
+            </div>
+            <div id="my-message">
+                <ul>
+                    <li>
+                        <img src="images/headpic.jpg">
+                        <p>Abc123</p>
+                        <p>发表评论</p>
+                        <a href="">一路向北，追寻探索者的未知路</a>
+                        <p>赞！</p>
+                        <input type="button" value="删除">
+                        <input type="button" value="回复">
+                    </li>
+                    <li>
+                        <img src="images/headpic.jpg">
+                        <p>Abc123</p>
+                        <p>发表评论</p>
+                        <a href="">一路向北，追寻探索者的未知路</a>
+                        <p>赞！</p>
+                        <input type="button" value="删除">
+                        <input type="button" value="回复">
+                    </li>
+                </ul>
+                <div id="page7" style="margin-left:45%"></div>
+            </div>
+        </div>
+        <div class="personal-show" style=" display: none;">             <!-- 我的贡献-->
+            <div class="my-part-name">
+                <div>我的贡献</div>
+            </div>
+            <div id="my-devote-supply" >
+                <table class="layui-table" lay-even lay-skin="nob">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="40%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>内容</th>
+                        <th>时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="contribution">
+                    <tr>
+                        <td>1</td>
+                        <td>贵州 - 苗族 - 西江千户苗寨 - 人文 - 工艺品</td>
+                        <td>2017-01-01 12:00</td>
+                        <td>审核成功</td>
+                        <td>查看</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>贵州 - 苗族 - 西江千户苗寨 - 人文 - 工艺品</td>
+                        <td>2017-01-01 12:00</td>
+                        <td>审核失败</td>
+                        <td>查看</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>贵州 - 苗族 - 西江千户苗寨 - 人文 - 工艺品</td>
+                        <td>2017-01-01 12:00</td>
+                        <td>待审核</td>
+                        <td>查看</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page6" style="margin-left:44%;"></div>
+        </div>
+        <div class="personal-show" style=" display: none;">             <!-- 我的设置-->
+            <div class="note-part">
+                <div style="cursor: pointer;">个人设置</div>
+                <div id="myData" style="cursor: pointer;color: #000000">个人资料</div>
+                <div id="myPassword" style="cursor: pointer;">修改密码</div>
+                <div id="myHead" style="cursor: pointer;">修改头像</div>
+                <div id="myFollow" style="cursor: pointer;">关注</div>
+                <div class="number" style="color: #000000">1</div>
+                <div id="myFans" style="cursor: pointer;">粉丝</div>
+                <div class="number" style="color: #000000">0</div>
+            </div>
+            <div id="my-data">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">用户名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="Abc123" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="sex" value="男" title="男">
+                            <input type="radio" name="sex" value="女" title="女" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">爱好</label>
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="like[write]" title="写作">
+                            <input type="checkbox" name="like[read]" title="阅读">
+                            <input type="checkbox" name="like[dai]" title="美食">
+                            <input type="checkbox" name="like[write]" title="文化">
+                            <input type="checkbox" name="like[read]" title="摄影">
+                            <input type="checkbox" name="like[dai]" title="自驾">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">背景图片</label>
+                        <div class="layui-input-block">
+                            <button class="layui-btn">
+                                <i class="layui-icon">&#xe608;</i> 添加
+                            </button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">个性签名</label>
+                        <div class="layui-input-block">
+                            <textarea name="desc" placeholder="和大家说些什么" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="my-password" style="display: none">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">当前密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        </div>
+                        <!--<div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">新设密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        </div>
+                        <!--<div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">重复密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        </div>
+                        <!--<div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="my-head" style="display: none">
+                <img src="images/headpic.jpg">
+                <!--<input type="button" value="更换头像">-->
+                <button class="layui-btn">更换头像</button>
+                <!--<div></div>-->
+            </div>
+            <div id="my-follow" style="display: none">
+                <ul>
+                    <li>
+                        <img src="images/homepage.jpg">
+                        <img src="images/headpic.jpg">
+                        <a href="">Abc123</a>
+                    </li>
+                    <li>
+                        <img src="images/homepage.jpg">
+                        <img src="images/headpic.jpg">
+                        <a href="">Abc123</a>
+                    </li>
+                    <li>
+                        <img src="images/homepage.jpg">
+                        <img src="images/headpic.jpg">
+                        <a href="">Abc123</a>
+                    </li>
+                    <li>
+                        <img src="images/homepage.jpg">
+                        <img src="images/headpic.jpg">
+                        <a href="">Abc123</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="my-fans" style="display: none">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box footer">				<!-- 底部-->
+        <div class="bottomLine"></div>
+        <nav>
+            <div class="footer-txt footer-title">联系我们</div>
+            <div class="box footer-icon">
+                <a href="www.weibo.com">
+                    <div class="icon box icon-weibo">
+                        <img src="images/weibo.png">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="icon icon-wechat">
+                        <ul>
+                            <li>
+                                <img id="wechat" src="images/wechat.png">
+                            </li>
+                            <li>
+                                <img id="wechat2" src="images/wechat2.png">
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-txt footer-service">
+                <a href="customerService.html">用户手册</a>
+            </div>
+            <div class="footer-txt footer-subscribe">
+                <a class="login" href="#">Hannah / 退出</a>
+            </div>
+            <div class="footer-txt footer-msg">Copyright © 2017 Pinch Design Ltd. All rights reserved. Zuji is a registered trademark.</div>
+        </nav>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="raty-master/lib/jquery.raty.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
+<!-- <script type="text/javascript" src="js/score.js"></script> -->
+<script type="text/javascript" src="layui/layui.js"></script>
+<script type="text/javascript" src="js/personalCenter.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+<!--<script>-->
+    <!--//JavaScript代码区域-->
+    <!--layui.use('element', function(){-->
+        <!--var element = layui.element();-->
+        <!--element.on('nav(filter)', function(elem){-->
+            <!--console.log(elem); //得到当前点击的DOM对象-->
+        <!--});-->
+        <!--//…-->
+    <!--});-->
+</body>
+</html>
